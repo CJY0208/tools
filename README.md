@@ -1,7 +1,3 @@
----
-sidemenu: false
----
-
 # 辅助工具库
 
 ## 安装
@@ -103,10 +99,4 @@ export {
   url, // url 参数取值
   value, // 值选择，同 ?? 算符
 }
-```
-
-```jsx
-import React from 'react'
-import './layout.less'
-export default () => null
 ```

@@ -24,6 +24,14 @@
     "release:latest": "npm run build && np --no-cleanup --yolo --no-publish --tag=latest && npm publish",
     "release:beta": "npm run build && np --no-cleanup --yolo --no-publish --tag=beta && npm publish"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/CJY0208/tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CJY0208/tools.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@cjy0208/import-cost": "^2.2.1",
