@@ -4,6 +4,12 @@ sidemenu: false
 
 # 辅助工具库
 
+[![size](https://img.shields.io/bundlephobia/minzip/@cjy0208/tools@latest.svg)](https://bundlephobia.com/result?p=@cjy0208/tools@latest)
+<span> </span>
+[![dm](https://img.shields.io/npm/dm/@cjy0208/tools.svg)](https://github.com/CJY0208/@cjy0208/tools)
+<span> </span>
+![](https://visitor-badge.glitch.me/badge?page_id=cjy0208.tools.site)
+
 ## 安装
 
 ```bash
