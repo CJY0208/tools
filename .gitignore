@@ -3,6 +3,7 @@
 */.umi
 
 # production
+/docs-dist
 /dist
 /es
 /lib
