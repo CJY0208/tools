@@ -1,0 +1,54 @@
+@import '~dumi-theme-default/src/style/variables.less';
+
+* {
+  &::-webkit-scrollbar-thumb {
+    background-color: #ddd !important;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: transparent;
+    transition: background-color 0.2s;
+  }
+}
+
+.@{prefix}-menu {
+  padding-top: 0 !important;
+
+  &-inner {
+    padding-top: 50px;
+    box-sizing: border-box;
+  }
+
+  .@{prefix}-menu-list > li > a.active::after {
+    opacity: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .@{prefix}-search > input:not(:focus) {
+    background-position-x: 7px;
+  }
+
+  @width: calc(100vw - 64px);
+
+  .@{prefix}-search-input:focus {
+    width: @width;
+  }
+
+  .@{prefix}-search > ul {
+    min-width: @width !important;
+    max-width: @width !important;
+    width: @width;
+  }
+}

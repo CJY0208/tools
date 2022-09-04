@@ -1,0 +1,72 @@
+{
+  "name": "@cjy0208/tools",
+  "version": "0.0.0-beta.6",
+  "description": "辅助工具库",
+  "main": "lib/index.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "dumi dev",
+    "start": "dumi dev",
+    "build": "npm run clean:build && father-build",
+    "docs:build": "npm run build && dumi build",
+    "size": "node ./scripts/size/index.js",
+    "format": "prettier --write \"./**/*.{js,ts,jsx,tsx,json,css,scss,sass,less,html}\"",
+    "clean:build": "rimraf dist es lib",
+    "release": "npm run release:beta",
+    "release:latest": "npm run build && np --no-cleanup --yolo --no-publish --tag=latest && npm publish",
+    "release:beta": "npm run build && np --no-cleanup --yolo --no-publish --tag=beta && npm publish"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@cjy0208/import-cost": "^2.2.1",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "dumi": "^1.1.10",
+    "eslint": "^7.23.0",
+    "father-build": "^1.19.2",
+    "filesize": "^8.0.6",
+    "husky": "^4.x",
+    "lint-staged": "^10.5.4",
+    "np": "^7.4.0",
+    "ora": "5.4.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "yargs": "^17.3.0"
+  },
+  "resolutions": {
+    "@types/react": "^16.14.2",
+    "@types/estree": "^0.0.50"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,jsx,tsx,json,css,scss,sass,less,html,md}": [
+      "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {}
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@babel/runtime": "^7",
+    "classnames": "^2.3.1"
+  }
+}
