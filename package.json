@@ -12,10 +12,11 @@
     "dist"
   ],
   "scripts": {
+    "init": "npx pnpm@6 i",
     "dev": "dumi dev",
     "start": "dumi dev",
     "build": "npm run clean:build && father-build",
-    "docs:build": "npm run build && dumi build",
+    "docs:build": "npm run build && dumi build && node ./scripts/afterBuild",
     "size": "node ./scripts/size/index.js",
     "format": "prettier --write \"./**/*.{js,ts,jsx,tsx,json,css,scss,sass,less,html}\"",
     "clean:build": "rimraf dist es lib",
@@ -67,6 +68,7 @@
   "sideEffects": false,
   "dependencies": {
     "@babel/runtime": "^7",
-    "classnames": "^2.3.1"
+    "classnames": "^2.3.1",
+    "fs-extra": "^10.1.0"
   }
 }
